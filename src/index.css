@@ -1,11 +1,14 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
 
 @theme {
-  --color-accent: #2563eb;
-  --color-accent-light: #3b82f6;
-  --color-marked: #dcfce7;
-  --color-marked-border: #22c55e;
-  --color-bingo: #fbbf24;
+  --color-accent: #A0826D;
+  --color-accent-light: #B8956A;
+  --color-marked: #A8B5A3;
+  --color-marked-border: #8A9A7E;
+  --color-bingo: #B8956A;
+  --color-text: #2C1810;
+  --color-cream: #F5E6D3;
 }
 
 html,
@@ -16,6 +19,34 @@ body,
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #2C1810;
   -webkit-tap-highlight-color: transparent;
+}
+
+/* Serif font for headings */
+.font-serif {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+/* Calm animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
