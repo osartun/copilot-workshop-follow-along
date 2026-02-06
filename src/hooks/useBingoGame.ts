@@ -43,7 +43,7 @@ function validateStoredData(data: unknown): data is StoredGameData {
     return false;
   }
   
-  if (typeof obj.gameState !== 'string' || !['start', 'playing', 'bingo'].includes(obj.gameState)) {
+  if (typeof obj.gameState !== 'string' || !['start', 'playing', 'win'].includes(obj.gameState)) {
     return false;
   }
   
@@ -177,7 +177,7 @@ export function useBingoGame(): BingoGameState & BingoGameActions {
         // Schedule state updates to avoid synchronous setState in effect
         queueMicrotask(() => {
           setWinningLine(bingo);
-          setGameState('bingo');
+          setGameState('win');
           setShowBingoModal(true);
         });
       }
